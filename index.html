@@ -773,12 +773,14 @@ function buildPath() {
   pathPoints = [];
   // We want the path to run from top to bottom of the viewport
   // but zigzag left↔right as the user scrolls
-  const center = W / 2;
-const amplitude = W * 0.12; // smaller = tighter zigzag
-
-const x = i % 2 === 0
-  ? center - amplitude + Math.random() * (amplitude * 0.3)
-  : center + amplitude - Math.random() * (amplitude * 0.3);
+  const margin = W * 0.08;
+  for (let i = 0; i <= SEGMENTS; i++) {
+    const y = (i / SEGMENTS) * H;
+    // alternate between right and left zones
+    const x = i % 2 === 0
+      ? margin + Math.random() * (W * 0.3)
+      : W - margin - Math.random() * (W * 0.3);
+    pathPoints.push({ x, y });
   }
   // Build SVG path string with smooth curves
   let d = `M ${pathPoints[0].x} ${pathPoints[0].y}`;
