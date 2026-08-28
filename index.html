@@ -184,15 +184,18 @@
 
     .lead-grid>div,
     .lead-side {
-      background: var(--paper)
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 24px;
+      box-shadow: 4px 4px 0 var(--red)
     }
 
     .lead-grid>div {
-      padding: .2rem .5rem .7rem
+      padding: 1.2rem 1.6rem 1.6rem
     }
 
     .lead-side {
-      padding: .3rem .5rem .7rem
+      padding: 1.2rem 1.6rem 1.6rem
     }
 
     .brief-logo {
@@ -227,7 +230,8 @@
       text-transform: uppercase;
       margin-top: 1.6rem;
       border: 1px solid var(--ink);
-      box-shadow: 4px 4px 0 var(--red)
+      box-shadow: 4px 4px 0 var(--red);
+      border-radius: 8px
     }
 
     .btn:hover {
@@ -285,7 +289,10 @@
     .section-header>div,
     .gallery-head {
       background: var(--paper);
-      padding: .25rem .55rem
+      padding: 1.2rem 1.6rem;
+      border: 1px solid var(--rule);
+      border-radius: 24px;
+      box-shadow: 4px 4px 0 var(--red)
     }
 
     .section h2 {
@@ -387,7 +394,10 @@
       height: 330px;
       object-fit: cover;
       display: block;
-      filter: saturate(.78) contrast(1.04)
+      filter: saturate(.78) contrast(1.04);
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      box-shadow: 4px 4px 0 var(--red)
     }
 
     .app-preview {
@@ -397,7 +407,9 @@
       position: relative;
       overflow: hidden;
       background: linear-gradient(145deg, #ece7dc, #d3cabc);
-      border: 1px solid #c0b7a9
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      box-shadow: 4px 4px 0 var(--red)
     }
 
     .app-preview:before {
@@ -436,7 +448,10 @@
       width: 100%;
       height: auto;
       display: block;
-      filter: none !important
+      filter: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important
     }
 
     .app-preview-copy {
@@ -570,7 +585,7 @@
 
     footer .wrap {
       display: flex;
-      justify-content: space-between;
+      justify-between: space-between;
       gap: 1rem
     }
 
